@@ -41,4 +41,3 @@ class Recette {
         return $return;
     }
 }
-?>
