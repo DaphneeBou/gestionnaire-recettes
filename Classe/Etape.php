@@ -1,5 +1,4 @@
 <?php
-
 class Etape {
     private int $id;
     private int $recetteId;
