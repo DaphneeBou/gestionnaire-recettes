@@ -18,19 +18,18 @@ $nbIngredients = $crud->query("SELECT COUNT(*) AS total FROM ingredient")->fetch
 <body>
     <?php require 'partials/nav.php'; ?>    
 
-
 <div class="container-large">
     <img src="img/image2.svg" class="image2" >
     <div>
-    <h2>Bienvenue</h2>
-    <p>Toutes tes recettes réunies au même endroit, sans avoir à fouiller dans une pile de cahiers ou de captures d'écran. Ajoute, modifie et organise tes plats comme un vrai chef!</p>
-    <p>Ce système contien présentement:</p>
-    <p>
-        <strong><?= $nbRecettes; ?></strong> recettes,  
-        <strong><?= $nbCategories; ?></strong> categories et 
-        <strong><?= $nbIngredients; ?></strong> ingredients
-    </p>
-    <a href="recette-create.php" class="btn">Ajouter une nouvelle recette</a>
+        <h2>Bienvenue</h2>
+        <p>Toutes tes recettes réunies au même endroit, sans avoir à fouiller dans une pile de cahiers ou de captures d'écran. Ajoute, modifie et organise tes plats comme un vrai chef!</p>
+        <p>Ce système contien présentement:</p>
+        <p>
+            <strong><?= $nbRecettes; ?></strong> recettes,  
+            <strong><?= $nbCategories; ?></strong> categories et 
+            <strong><?= $nbIngredients; ?></strong> ingredients
+        </p>
+        <a href="recette-create.php" class="btn">Ajouter une nouvelle recette</a>
     </div>
 </div>
 </body>
