@@ -25,23 +25,21 @@ body {
     line-height: 1.5;
 }
 
-
-
 /* --- Navigation --- */
 .navigation {
     background-color: var(--couleur-secondaire);
     padding: 16px 24px;
     display: flex;
-    align-items:center;
-    justify-content: space-between;   
+    align-items: center;
+    justify-content: space-between;
 }
 
-.navigation a{
+.navigation a {
     text-decoration: none;
 }
 
 .logo-titre {
-    display:flex;
+    display: flex;
     align-items: center;
 }
 
@@ -74,21 +72,24 @@ h1 {
     margin: 1.5rem;
 }
 
-h2{
+h2 {
     font-size: 2rem;
     text-align: center;
 }
 
-h3{
+h3 {
     padding-bottom: 0.5rem;
     margin-bottom: 0;
 }
 
+/* Titre principal des pages recette / categorie  */
 .recettes {
     font-size: 2.5rem;
     text-align: center;
     font-weight: 800;
     color: var(--couleur-secondaire);
+    margin: 0 0 16px;
+    padding: 0;
 }
 
 /* --- Conteneur principal (pages formulaire / detail) --- */
@@ -121,18 +122,15 @@ h3{
 }
 
 /* --- Page d'accueil --- */
-
 .container-large img {
-    height:  500px;
+    height: 500px;
     padding-inline: 2rem;
 }
-
-
 
 /* --- Tableaux (index) --- */
 table {
     width: calc(100% - 48px);
-    margin:1.5rem;
+    margin: 1.5rem;
     border-collapse: collapse;
     background-color: var(--couleur-carte);
     border-radius: 1rem;
@@ -148,10 +146,9 @@ thead {
 th, td {
     padding: 0.5rem 1rem;
     text-align: left;
-    
 }
 
-td{
+td {
     padding: 0.5rem 1rem;
 }
 
@@ -223,7 +220,7 @@ textarea {
 .ingredients li {
     display: flex;
     align-items: center;
-    gap: 8px; 
+    gap: 8px;
     margin-bottom: 8px;
 }
 
@@ -313,20 +310,18 @@ input[type="submit"].btn {
 }
 
 .btn-special:hover {
-    text-decoration:2px solid underline;
+    text-decoration: 2px solid underline;
     text-underline-offset: 8px;
 }
 
 /* --- Liste de categories / recettes (liens) --- */
-.categories,
-.recettes {
+.categories {
     list-style: none;
     padding: 0;
     margin: 0 0 16px;
 }
 
-.categories li,
-.recettes li {
+.categories li {
     margin-bottom: 8px;
 }
 
@@ -364,7 +359,6 @@ input[type="submit"].btn {
     display: flex;
     gap: 8px;
     align-items: center;
-   
 }
 
 .form-row input[type="text"] {
