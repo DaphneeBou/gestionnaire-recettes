@@ -125,7 +125,7 @@ $ingredientsDisponibles = $crud->select('ingredient', 'nom', 'ASC');
                         <input type="text" name="nouvel_ingredient" placeholder="Nom du nouvel ingredient">
                     </label>
                     <label>Quantité
-                        <input type="number" step="0.01" name="quantite">
+                        <input type="number" step="0.01" name="quantite" min="0.01" required>
                     </label>
                     <label>Unité
                         <input type="text" name="unite">

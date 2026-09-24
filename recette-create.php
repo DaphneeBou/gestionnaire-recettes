@@ -34,10 +34,10 @@ $categories = $crud->select('categorie', 'nom', 'ASC');
                 <input type="text" name="nouvelle_categorie" placeholder="Nom de la nouvelle categorie">
             </label>
             <label>Temps de préparation (en minutes)
-                <input type="number" name="temps_preparation" min="1">
+                <input type="number" name="temps_preparation" min="1" required>
             </label>
             <label>Portions
-                <input type="number" name="portions" min="1">
+                <input type="number" name="portions" min="1" required>
             </label>
             <input type="submit" class="btn" value="Enregistrer">
         </form>

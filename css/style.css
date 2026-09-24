@@ -1,0 +1,405 @@
+/* --- Variables --- */
+:root {
+    --couleur-fond: #faf9f1;
+    --couleur-texte: black;
+    --couleur-accent: #c9622f;
+    --couleur-accent-fonce: #96431a;
+    --couleur-secondaire: #1c4d2a;
+    --couleur-danger: #c0392b;
+    --couleur-danger-fonce: #a5311f;
+    --couleur-bordure: #e3d9cd;
+    --couleur-carte: white;
+    --ombre: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* --- Reset de base --- */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--couleur-fond);
+    color: var(--couleur-texte);
+    line-height: 1.5;
+}
+
+
+
+/* --- Navigation --- */
+.navigation {
+    background-color: var(--couleur-secondaire);
+    padding: 16px 24px;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;   
+}
+
+.navigation a{
+    text-decoration: none;
+}
+
+.logo-titre {
+    display:flex;
+    align-items: center;
+}
+
+.navigation div img {
+    height: 2.5rem;
+}
+
+.navigation div h1 {
+    color: white;
+    font-size: 1.5rem;
+    padding-left: 1rem;
+    margin: 0;
+}
+
+.navigation div ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 24px;
+}
+
+/* --- Titres --- */
+h1, h2, h3 {
+    color: var(--couleur-accent-fonce);
+    font-weight: 700;
+}
+
+h1 {
+    margin: 1.5rem;
+}
+
+h2{
+    font-size: 2rem;
+    text-align: center;
+}
+
+h3{
+    padding-bottom: 0.5rem;
+    margin-bottom: 0;
+}
+
+.recettes {
+    font-size: 2.5rem;
+    text-align: center;
+    font-weight: 800;
+    color: var(--couleur-secondaire);
+}
+
+/* --- Conteneur principal (pages formulaire / detail) --- */
+.container {
+    max-width: 800px;
+    margin: 1.5rem auto;
+    padding: 1.5rem 2rem;
+    background-color: var(--couleur-carte);
+    border-radius: 2rem;
+    box-shadow: var(--ombre);
+}
+
+.container-large {
+    max-width: 1000px;
+    margin: 24px auto;
+    padding: 2rem;
+    background-color: var(--couleur-carte);
+    border-radius: 2rem;
+    box-shadow: var(--ombre);
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.container-mini {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+}
+
+/* --- Page d'accueil --- */
+
+.container-large img {
+    height:  500px;
+    padding-inline: 2rem;
+}
+
+
+
+/* --- Tableaux (index) --- */
+table {
+    width: calc(100% - 48px);
+    margin:1.5rem;
+    border-collapse: collapse;
+    background-color: var(--couleur-carte);
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: var(--ombre);
+}
+
+thead {
+    background-color: var(--couleur-secondaire);
+    color: white;
+}
+
+th, td {
+    padding: 0.5rem 1rem;
+    text-align: left;
+    
+}
+
+td{
+    padding: 0.5rem 1rem;
+}
+
+tbody td a {
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--couleur-texte);
+}
+
+tbody tr {
+    border-bottom: 1px solid var(--couleur-bordure);
+}
+
+tbody tr:last-child {
+    border-bottom: none;
+}
+
+tbody tr:hover {
+    background-color: var(--couleur-fond);
+}
+
+/* --- Formulaires --- */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-weight: 600;
+    color: var(--couleur-texte);
+    margin-top: 1rem;
+}
+
+input[type="text"],
+input[type="number"],
+select,
+textarea {
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 10px 12px;
+    border: 1px solid var(--couleur-bordure);
+    border-radius: 6px;
+    background-color: var(--couleur-fond);
+    color: var(--couleur-texte);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: none;
+    border-color: var(--couleur-accent);
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* --- Liste d'ingredients --- */
+.ingredients {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 16px;
+}
+
+.ingredients li {
+    display: flex;
+    align-items: center;
+    gap: 8px; 
+    margin-bottom: 8px;
+}
+
+.ingredients li .ingredient-texte {
+    flex: 1;
+    padding: 10px 14px;
+    background-color: var(--couleur-fond);
+    border: 1px solid var(--couleur-bordure);
+    border-radius: 6px;
+}
+
+/* --- Liste d'etapes --- */
+.etapes {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 16px;
+}
+
+.etapes li {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 1rem;
+}
+
+.etapes li .etape-texte {
+    flex: 1;
+    padding: 8px 14px;
+    background-color: var(--couleur-fond);
+    border: 1px solid var(--couleur-bordure);
+    border-radius: 6px;
+}
+
+/* --- Boutons --- */
+.btn {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    margin: 4px 4px 4px 0;
+    background-color: var(--couleur-accent);
+    color: #ffffff;
+    border: none;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.15s ease;
+}
+
+.btn:hover {
+    background-color: var(--couleur-accent-fonce);
+    text-decoration: none;
+}
+
+.btn.red {
+    background-color: var(--couleur-danger);
+}
+
+.btn.red:hover {
+    background-color: var(--couleur-danger-fonce);
+}
+
+input[type="submit"].btn {
+    font-family: inherit;
+    padding-block: 0.5rem;
+    margin: 1rem 0;
+}
+
+.add {
+    margin-inline: 1.5rem;
+}
+
+.btn.more {
+    padding-block: 0.2rem;
+}
+
+.btn-special {
+    display: inline-block;
+    padding: 0.5rem 0;
+    margin: 4px 4px 4px 0;
+    color: black;
+    border: none;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.btn-special:hover {
+    text-decoration:2px solid underline;
+    text-underline-offset: 8px;
+}
+
+/* --- Liste de categories / recettes (liens) --- */
+.categories,
+.recettes {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 16px;
+}
+
+.categories li,
+.recettes li {
+    margin-bottom: 8px;
+}
+
+.categories li a {
+    display: block;
+    padding: 10px 14px;
+    background-color: var(--couleur-fond);
+    border: 1px solid var(--couleur-bordure);
+    border-radius: 6px;
+    text-decoration: none;
+    color: var(--couleur-secondaire);
+    font-weight: 600;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.categories li a:hover {
+    background-color: var(--couleur-accent);
+    color: var(--couleur-fond);
+}
+
+/* --- Message d'erreur --- */
+.message-erreur {
+    background-color: #fbeae7;
+    color: var(--couleur-danger);
+    border: 1px solid var(--couleur-danger);
+    border-radius: 1rem;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+/* --- Ligne de formulaire (champ + bouton cote a cote) --- */
+.form-row {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+   
+}
+
+.form-row input[type="text"] {
+    flex: 1;
+}
+
+.form-row input[type="submit"].btn {
+    padding: 0.5rem 1rem;
+    background-color: var(--couleur-secondaire);
+}
+
+/* --- Formulaire d'ajout d'ingredient repliable --- */
+.ajout-ingredient {
+    margin-bottom: 16px;
+}
+
+.ajout-ingredient summary.btn {
+    list-style: none;
+}
+
+.ajout-ingredient summary.btn::marker,
+.ajout-ingredient summary.btn::-webkit-details-marker {
+    display: none;
+}
+
+.ajout-ingredient fieldset {
+    border: 2px solid var(--couleur-bordure);
+    border-radius: 8px;
+    padding: 16px;
+    margin: 12px 0 0;
+    background-color: var(--couleur-carte);
+}
+
+.ajout-ingredient legend {
+    font-weight: 700;
+    color: var(--couleur-accent-fonce);
+    padding: 0 1rem;
+}
