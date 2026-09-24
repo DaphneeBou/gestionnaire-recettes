@@ -7,8 +7,11 @@ class Recette {
     private int $portions;
     private int $categorieId;
 
-    public function __construct(string $titre = "", int $categorieId = 0, int $id = 0) {
+    public function __construct(string $titre = "", string $description = "", int $tempsPreparation = 0, int $portions = 0, int $categorieId = 0, int $id = 0) {
         $this->titre = $titre;
+        $this->description = $description;
+        $this->tempsPreparation = $tempsPreparation;
+        $this->portions = $portions;
         $this->categorieId = $categorieId;
         $this->id = $id;
     }
