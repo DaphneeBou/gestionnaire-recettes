@@ -1,6 +1,7 @@
 <?php
 class CRUD extends PDO {
 
+    //la même connection que la version n0c (à changer aux besoins)
     public function __construct(){
         parent::__construct('mysql:host=localhost; dbname=xurhtuguwt_recettes; port=3306; charset=utf8mb4', 'xurhtuguwt_admin', 'Recette2026!Maisonneuve');
     }
